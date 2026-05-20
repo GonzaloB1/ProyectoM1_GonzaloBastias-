@@ -1,14 +1,54 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     padding: 0px;
-    text-align: left;
+    text-align: center;
     background-color: cadetblue;
 }
 
-color-paletas{
+.color-paletas{
     display: flex;
     height: 300px;
     border-radius: 10px;
     overflow: hidden;
+    width: 30px;
+}
+.color {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 1rem;
+    cursor: pointer; 
+    transition: flex 0.3s;
+
+}
+
+.color:hover{
+    flex: 1.2;
+
+}
+
+.color-code{
+    background-color: black;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+
+}
+
+button{
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+}
+
+button:hover{
+    transform: scale(1.05);
 
 }
