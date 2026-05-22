@@ -4,20 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>paletas de colores colorfly studio</title>
+    <title>Colorfly Studio — Generador de paletas</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <h1>colorfly studio</h1>
-    <button id="generate-btn">
-    Generar paleta
-</button>
-    <div class="color de paletas" id="paletas"></div>
-    <div id="palette"></div>
-
-
+ 
+    <header class="site-header">
+        <h1>colorfly <span class="accent">studio</span></h1>
+        <p class="subtitle">Generador de paletas de colores</p>
+    </header>
+ 
+    <main class="container">
+ 
+        
+        <section class="controls" aria-label="Controles de generación">
+ 
+            <button id="generate-btn" class="btn btn--primary" aria-label="Generar nueva paleta aleatoria">
+                ↻ Generar paleta
+            </button>
+ 
+            
+            <fieldset class="btn-group" aria-label="Cantidad de colores en la paleta">
+                <legend class="group-label">Cantidad</legend>
+                <button class="btn btn--size active" data-size="6" aria-pressed="true">6</button>
+                <button class="btn btn--size" data-size="8" aria-pressed="false">8</button>
+                <button class="btn btn--size" data-size="9" aria-pressed="false">9</button>
+            </fieldset>
+ 
+            
+            <fieldset class="btn-group" aria-label="Formato de código de color">
+                <legend class="group-label">Formato</legend>
+                <button class="btn btn--format active" data-format="hex" aria-pressed="true">HEX</button>
+                <button class="btn btn--format" data-format="hsl" aria-pressed="false">HSL</button>
+            </fieldset>
+ 
+            <button id="save-btn" class="btn btn--save" aria-label="Guardar paleta actual">
+                ♥ Guardar
+            </button>
+ 
+        </section>
+ 
+        
+        <section aria-label="Paleta generada actualmente">
+            <div id="palette" class="palette" role="list" aria-live="polite"></div>
+        </section>
+ 
+        <hr class="divider">
+ 
+        
+        <section class="saved-section" aria-label="Paletas guardadas">
+            <div class="saved-header">
+                <h2 class="saved-title">Paletas guardadas</h2>
+                <span id="saved-count" class="saved-count" aria-live="polite"></span>
+            </div>
+            <div id="saved-list" class="saved-list" role="list"></div>
+        </section>
+ 
+    </main>
+ 
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+ 
     <script src="script.js"></script>
-
 </body>
 </html>
+ 
