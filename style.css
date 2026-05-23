@@ -162,7 +162,8 @@ fieldset {
 
 .palette {
     display: flex;
-    height: 180px;
+    flex-wrap: wrap;
+    height: 150px;
     border-radius: var(--radius-lg);
     overflow: visible;
     border: 1px solid var(--color-border);
@@ -186,7 +187,7 @@ fieldset {
 }
 
 .swatch:focus-visible {
-    outline: 3px solid var(--color-accent);
+    outline: 3px solid ce(--color-accent);
     outline-offset: -3px;
 }
 
