@@ -164,7 +164,7 @@ fieldset {
     display: flex;
     height: 180px;
     border-radius: var(--radius-lg);
-    overflow: hidden;
+    overflow: visible;
     border: 1px solid var(--color-border);
     margin-bottom: 1.5rem;
 }
@@ -176,14 +176,13 @@ fieldset {
     justify-content: center;
     padding-bottom: 12px;
     cursor: pointer;
-    transition: flex var(--transition-mid);
-    
+    transition: flex 0.25s ease;
     outline: none;
 }
 
 .swatch:hover,
 .swatch:focus-visible {
-    flex: 1.6;
+    flex: 1.8;
 }
 
 .swatch:focus-visible {
@@ -209,6 +208,8 @@ fieldset {
 .swatch:focus-visible .swatch-code {
     opacity: 1;
 }
+.swatch:first-child { border-radius: var(--radius-lg) 0 0 var(--radius-lg); }
+.swatch:last-child  { border-radius: 0 var(--radius-lg) var(--radius-lg) 0; }
 
 
 .divider {
@@ -353,4 +354,37 @@ fieldset {
     .palette {
         height: 140px;
     }
+}
+
+
+
+.footer {
+  background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+  color: #ffffff;
+  padding: 20px 15px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer h2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #ffb703;
+}
+
+.footer p {
+  margin: 5px 0;
+  color: #d6d6d6;
+}
+
+.footer-copy {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.7;
 }

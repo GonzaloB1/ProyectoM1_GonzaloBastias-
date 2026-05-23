@@ -8,7 +8,6 @@ const savedListEl  = document.getElementById('saved-list');
 const savedCountEl = document.getElementById('saved-count');
 const toastEl      = document.getElementById('toast');
 
-
 function randomChannel() {
     return Math.floor(Math.random() * 256);
 }
@@ -97,7 +96,7 @@ function renderPalette() {
                 copyToClipboard(label, swatch);
             }
         });
-
+        
         paletteEl.appendChild(swatch);
     });
 }
