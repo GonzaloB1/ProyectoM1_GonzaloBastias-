@@ -85,7 +85,16 @@ function renderPalette() {
         swatch.setAttribute('tabindex', '0');
         swatch.setAttribute('aria-label', `Color ${label}. Presioná Enter o hacé clic para copiar.`);
 
-        swatch.innerHTML = `<span class="swatch-code">${label}</span>`;
+        const tooltip = document.createElement("div");
+        tooltip.className = "swatch-tooltip";
+        tooltip.textContent = "Click para copiar";
+
+        const code = document.createElement("span");
+        code.className = "swatch-code";
+        code.textContent = label;
+
+        swatch.appendChild(tooltip);
+        swatch.appendChild(code);
 
        
         swatch.addEventListener('click', () => copyToClipboard(label, swatch));
@@ -125,8 +134,8 @@ function renderSaved() {
         swatches.className = 'saved-swatches';
         swatches.setAttribute('tabindex', '0');
         swatches.setAttribute('role', 'button');
-        swatches.setAttribute('aria-label', `Paleta guardada ${index + 1} con ${colors.length} colores. Clic para restaurar.`);
-        swatches.title = 'Clic para restaurar esta paleta';
+        swatches.setAttribute('aria-label', `Paleta guardada ${index + 1} con ${colors.length} colores. Click para volver a estos colores.`);
+        swatches.title = 'Click para volver a estos colores';
 
         colors.forEach((color) => {
             const mini = document.createElement('div');
